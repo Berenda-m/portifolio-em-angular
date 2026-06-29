@@ -1,1 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+
+    /* Fundo */
+    --background: #EDE0D4;
+    --background-secondary: #E6CCB2;
+     --background-light: #F5EBE0;
+
+    /* Texto */
+    --text-primary: #7F5539;
+    --text-secondary: #9C6644;
+
+    /* Destaques */
+    --primary: #9C6644;
+    --primary-hover: #7F5539;
+
+    /* Bordas */
+    --border: #B08968;
+
+    /* Detalhes */
+    --accent: #DDB892;
+
+    /* Cor de destaque */
+    --wine: #a51c30;
+
+    /* Branco e preto */
+    --white: #FFFFFF;
+    --black: #2B2B2B;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Cormorant Garamond', serif;
+    background-color: var(--background);
+    color: var(--text-primary);
+}
+a{
+    text-decoration: none;
+}
