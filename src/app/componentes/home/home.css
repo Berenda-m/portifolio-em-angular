@@ -13,7 +13,6 @@ main h2 {
     font-size: 2.5rem;
     font-weight: 600;
     color: var(--wine);
-
     margin: .5rem 0 1rem;
 }
 
@@ -50,9 +49,11 @@ main p {
     padding: .6rem 1.8rem;
     border-radius: 10px;
     font-family: 'EB Garamond', serif;
+    font-weight: 400;
     font-size: 1.0rem;
     transition: .3s;
     padding: 15px;
+    text-shadow: 2px 2px 4px rgba(13, 13, 13, 0.51)
 }
 
 
@@ -64,6 +65,7 @@ main p {
 
 .hero-img img {
     width: 280px;
+    border-radius: 50px;
 }
 
 .hero-social {
@@ -91,23 +93,27 @@ main p {
     color: var(--white);
     border-color: var(--primary);
 }
-.sobre{
+
+.sobre {
     padding: 6rem 0;
 }
-.sobre h2{
+
+.sobre h2 {
     font-family: 'Cormorant Garamond', serif;
     font-size: 3rem;
     color: var(--text-primary);
     margin-bottom: 1.5rem;
 }
-.sobre p{
+
+.sobre p {
     font-family: 'EB Garamond', serif;
     font-size: 1.3rem;
     line-height: 1.8;
     color: var(--text-secondary);
     max-width: 700px;
 }
-.sobre h2::after{
+
+.sobre h2::after {
     content: "";
     display: block;
     width: 90px;
@@ -115,32 +121,37 @@ main p {
     background: var(--border);
     margin-top: .5rem;
 }
-hr{
+
+hr {
     border: none;
     height: 2px;
     background: var(--border);
     margin: 5rem 0;
     opacity: .7;
 }
-.projetos{
+
+.projetos {
     padding: 4rem 0;
 }
-.projetos h2{
+
+.projetos h2 {
     font-family: 'Cormorant Garamond', serif;
     font-size: 2.8rem;
     color: var(--text-primary);
     margin-bottom: 1rem;
     text-align: center;
-    
+
 }
-.cards{
+
+.cards {
     display: flex;
     gap: 2rem;
     justify-content: center;
     flex-wrap: wrap;
 
 }
-.card{
+
+.card {
     width: 300px;
     background: var(--background-secondary);
     border: 2px solid var(--border);
@@ -148,11 +159,13 @@ hr{
     overflow: hidden;
     transition: .3s;
 }
-.card:hover{
+
+.card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .15);
 }
-.card img{
+
+.card img {
     width: calc(100% - 20px);
     margin: 10px auto;
     display: block;
@@ -161,18 +174,40 @@ hr{
     object-fit: cover;
     object-position: center;
 }
-.card h3{
+
+.card h3 {
     font-family: 'Cormorant Garamond', serif;
     color: var(--text-primary);
     padding: 1rem 1.5rem .5rem;
 
 }
-.card p{
+
+.card p {
     padding: 0 1.5rem;
 }
-.card a{
+
+.card a {
     display: inline-block;
     margin: 1.5rem;
     color: var(--wine);
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-shadow: 2px 2px 4px rgba(232, 222, 222, 0.5);
     text-decoration: none;
+}
+
+.moldura {
+    display: inline-block;
+    padding: 18px;
+    background: linear-gradient(145deg, #8b5a2b, #5b3a1a);
+    border: 6px solid #d4af37;
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, .3),
+        inset 0 0 0 3px #f2d27a;
+}
+
+.moldura img {
+    display: block;
+    width: 280px;
+    border: 2px solid #f8f1dc;
 }

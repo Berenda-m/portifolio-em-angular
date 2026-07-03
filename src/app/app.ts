@@ -4,11 +4,12 @@ import { Header } from "./componentes/header/header";
 import { Home } from './componentes/home/home';
 import { Footer } from './componentes/footer/footer';
 import { Contato } from './componentes/contato/contato';
+import { Projetos } from './componentes/projetos/projetos';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, Header, Home, Footer, Contato],
+  imports: [RouterOutlet, Header, Home, Footer, Contato, Projetos],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

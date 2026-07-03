@@ -47,3 +47,9 @@ nav ul {
     margin-top: 1rem;
     list-style: none;
 }
+
+nav a.pagina-ativa {
+    color: var(--wine);
+    padding: .5rem 1rem;
+    border-radius: 8px;
+}
