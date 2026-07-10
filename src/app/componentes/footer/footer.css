@@ -25,8 +25,8 @@ footer p{
     margin-bottom: 2rem;
 }
 .footer-social a{
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,8 +61,8 @@ footer p{
     transition: .3s;
 }
 .btn-topo i{
-    width: 45px;
-    height: 45px;
+    width: 30px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;

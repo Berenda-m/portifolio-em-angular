@@ -46,7 +46,7 @@
     margin: 20px;
     font-size: 1.2rem;
     text-shadow: 1px 1px rgba(0, 0, 0, 0.021);
-    font-weight: 550;
+    font-weight: 500;
 }
 
 
@@ -58,4 +58,19 @@ h2 {
     color: var(--wine);
     margin: .5rem 0 1rem;
     margin-top: 20px;
+}
+.moldura {
+    display: inline-block;
+    padding: 18px;
+    background: linear-gradient(145deg, #8b5a2b, #5b3a1a);
+    border: 6px solid #d4af37;
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, .3),
+        inset 0 0 0 3px #f2d27a;
+}
+
+.moldura img {
+    display: block;
+    width: 280px;
+    border: 2px solid #f8f1dc;
 }
