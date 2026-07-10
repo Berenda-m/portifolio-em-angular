@@ -1,0 +1,61 @@
+
+
+.cards {
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+
+}
+
+.card {
+    width: 350px;
+    background: var(--background-secondary);
+    border: 2px solid var(--border);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .15);
+}
+
+.card img {
+    width: calc(90% - 20px);
+    margin: 25px auto;
+    display: block;
+    border-radius: 12px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card h3, h4 {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--wine);
+    padding: 0.8rem 1rem;
+    text-align: center;
+    font-size: 1.06rem;
+
+}
+
+.card p {
+    padding: 0 1.5rem;
+    margin: 20px;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.021);
+    font-weight: 550;
+}
+
+
+h2 {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--wine);
+    margin: .5rem 0 1rem;
+    margin-top: 20px;
+}
