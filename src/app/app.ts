@@ -5,11 +5,12 @@ import { Home } from './componentes/home/home';
 import { Footer } from './componentes/footer/footer';
 import { Contato } from './componentes/contato/contato';
 import { Projetos } from './componentes/projetos/projetos';
+import { SideBar } from './componentes/side-bar/side-bar';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, Header, Home, Footer, Contato, Projetos],
+  imports: [RouterOutlet, Header, Home, Footer, Contato, Projetos, SideBar],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
