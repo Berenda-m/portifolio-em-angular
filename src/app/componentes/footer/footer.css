@@ -13,7 +13,7 @@ footer h2{
 }
 footer p{
     max-width: 650px;
-    margin: 0 auto 2rem;
+    margin: 0 auto 1rem;
     font-family: 'EB Garamond', serif;
     color: var(--text-secondary);
     line-height: 1.8;

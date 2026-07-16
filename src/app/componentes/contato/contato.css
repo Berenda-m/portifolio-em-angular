@@ -52,3 +52,21 @@ main p {
     color: var(--white);
     border-color: var(--primary);
 }
+
+@media (max-width: 768px){
+    main {
+        padding: 3rem 1.5rem;
+        margin-left: 30px;
+    }
+
+     main h1 {
+        font-size: 1.8rem;
+        margin-left: 30px;
+    }
+
+    main p {
+        font-size: 1.1rem;
+        max-width: 100%;
+        margin-left: 10px;
+    }
+}

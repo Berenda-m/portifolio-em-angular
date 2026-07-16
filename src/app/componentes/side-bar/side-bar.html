@@ -3,15 +3,14 @@
         <img src="/images/jose.webp" alt="mini foto-jose" width="90">
     </div>
     <ul>
-        <li>
-            <a href="#topo"> <i class="fa-solid fa-house"></i> </a>
-            <a href="#sobre"><i class="fa-solid fa-user"></i></a>
-            <a routerLink="/projetos"><i class="fa-solid fa-brush"></i></a>
-            <a routerLink="/contato"><i class="fa-solid fa-phone"></i></a>
-            <a (click)="voltarAoTopo()">
-                <i class="fa-solid fa-arrow-up"></i>
-            </a>
-        </li>
-    </ul>
 
+        <li> <a href="#topo"> <i class="fa-solid fa-house"></i> </a></li>
+        <li> <a href="#sobre"><i class="fa-solid fa-user"></i></a></li>
+        <li><a routerLink="/projetos"><i class="fa-solid fa-brush"></i></a></li>
+        <li><a routerLink="/contato"><i class="fa-solid fa-phone"></i></a></li>
+
+    </ul>
+    <a class="toposidebar" (click)="voltarAoTopo()">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
 </nav>
