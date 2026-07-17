@@ -1,9 +1,14 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-projetos',
-  imports: [],
+  standalone: true,
+  imports: [FormsModule],
   templateUrl: './projetos.html',
   styleUrl: './projetos.css',
 })
-export class Projetos {}
+export class Projetos {
+
+  texto: string = '';
+}

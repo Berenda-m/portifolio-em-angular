@@ -3,7 +3,7 @@
 
     <div class="cards">
         <article class="card">
-            <img  class="moldura"  src="images/arte.webp" alt="estudio de arte" width="250">
+            <img class="moldura" src="images/arte.webp" alt="estudio de arte" width="250">
             <h3>O Estúdio do Artista(1740)</h3>
             <h4>Johann Georg Platzer
                 (Austríaco, 1704–1761)</h4>
@@ -16,7 +16,7 @@
 
         </article>
         <article class="card">
-            <img    class="moldura" src="images/musica.webp" alt="Musica no século 18" width="250">
+            <img class="moldura" src="images/musica.webp" alt="Musica no século 18" width="250">
             <h3>A Lição de Música (1808)</h3>
             <h4>Louis Moritz (Holandês, 1773 - 1850)</h4>
             <p>Louis Moritz foi um pintor do norte dos Países Baixos.
@@ -37,7 +37,8 @@
         </article>
 
         <article class="card">
-            <img class="moldura" src="/images/monet.webp" alt="Moça passando do lado de fora na janela com lenço vermelho sobre a cabeça " width="250">
+            <img class="moldura" src="/images/monet.webp"
+                alt="Moça passando do lado de fora na janela com lenço vermelho sobre a cabeça " width="250">
             <h3>O Lenço Vermelho (c. 1868–73)</h3>
             <h4>Claude Monet (francês, 1840-1926)</h4>
             <p>Oscar-Claude Monet foi um pintor francês e fundador da pintura impressionista, visto como um precursor
@@ -49,7 +50,7 @@
         </article>
 
         <article class="card">
-            <img class="moldura"  src="images/munch.webp" alt="o grito" width="250">
+            <img class="moldura" src="images/munch.webp" alt="o grito" width="250">
             <h3>O Grito (1895)</h3>
             <h4>Edvard Munch (norueguês, 1863 - 1944)</h4>
             <p>Edvard Munch foi um pintor norueguês. Sua obra mais conhecida, The Scream, tornou-se uma das imagens
@@ -64,7 +65,7 @@
         </article>
 
         <article class="card">
-            <img class="moldura"  src="/images/renoir.webp" alt="retrato de homem barbudo com tédio" width="250">
+            <img class="moldura" src="/images/renoir.webp" alt="retrato de homem barbudo com tédio" width="250">
             <h3>Alfred Sisley (1876)</h3>
             <h4>Pierre-Auguste Renoir (French, 1841-1919)</h4>
             <p>Pierre-Auguste Renoir foi um artista francês que foi um dos principais pintores no desenvolvimento do
@@ -90,7 +91,8 @@
 
 
         <article class="card">
-            <img  class="moldura" src="/images/maxbeckmann.webp" alt="moças sentadas a beira da mesa de centro lendo jornal" width="250">
+            <img class="moldura" src="/images/maxbeckmann.webp"
+                alt="moças sentadas a beira da mesa de centro lendo jornal" width="250">
             <h3>o.T. (Zwei lesende Mädchen) (1937 – 1938)</h3>
             <h4>Max Beckmann (alemão, 1884 – 1950)</h4>
             <p>Max Carl Friedrich Beckmann foi um pintor, desenhista, gravador, escultor e escritor alemão. Embora seja
@@ -116,5 +118,28 @@
         </article>
     </div>
 
+    <div class="artistas">
+        <h2>Digite um artista e descubra um quadro</h2>
 
+        <input [(ngModel)]="texto" placeholder="Digite aqui">
+        @if(texto.toLocaleLowerCase() === 'monet') {
+        <img src="/images/monet.webp" alt="aaaaaa"><span><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+        <p>O quadro "A Capa Vermelha" (também conhecido como Madame Monet ou O Lenço Vermelho).
+            Pintado pelo mestre impressionista francês Claude Monet por volta de 1870, a obra retrata sua esposa Camille
+            vestida com uma capa vermelha, passando do lado de fora de uma janela em uma paisagem de neve. </p>
+
+        }
+        @else if(texto.toLocaleLowerCase()==='josé') {
+        <h1>artista não encontrado</h1>
+        }
+        @else if (texto.toLocaleLowerCase()==='frida') {
+            <img src="/images/254764fg.jpg" alt="van gogh"><span><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+        <p>"Retrato de uma Mulher de Branco" (1929) é uma rara pintura de Frida Kahlo que não é um autorretrato,
+            retratando uma mulher misteriosa em traje formal, sendo leiloada por 5,8 milhões de dólares em 2019. A obra
+            inacabada destaca-se por não focar na artista, com a identidade da modelo permanecendo desconhecida. Saiba
+            mais sobre a trajetória artística de Frida Kahlo.</p>
+        }
+    </div>
 </main>
