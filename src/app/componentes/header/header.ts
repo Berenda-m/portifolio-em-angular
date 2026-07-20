@@ -9,7 +9,7 @@ import { RouterLink, RouterLinkActive } from "@angular/router";
   styleUrl: './header.css',
 })
 export class Header {
-  contador = 0;
+  contador: number = 0;
 
   incrementar() {
     this.contador++;
