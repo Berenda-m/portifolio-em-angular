@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
   templateUrl: './contato.html',
   styleUrl: './contato.css',
 })
-export class Contato {}
+export class Contato {
+  usuario = ''
+  botao= ''
+
+  logado() {
+    if (this.usuario === 'logado') {
+      this.usuario = 'deslogado';
+      this.botao= 'entrar'
+    } else{
+      this.usuario = 'logado';
+      this.botao = 'sair'
+    }
+  }
+}
