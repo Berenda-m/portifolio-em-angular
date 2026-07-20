@@ -134,12 +134,18 @@
         <h1>artista não encontrado</h1>
         }
         @else if (texto.toLocaleLowerCase()==='frida') {
-            <img src="/images/254764fg.jpg" alt="van gogh"><span><i class="fa-solid fa-star"></i><i
+        <img src="/images/254764fg.jpg" alt="van gogh"><span><i class="fa-solid fa-star"></i><i
                 class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
         <p>"Retrato de uma Mulher de Branco" (1929) é uma rara pintura de Frida Kahlo que não é um autorretrato,
             retratando uma mulher misteriosa em traje formal, sendo leiloada por 5,8 milhões de dólares em 2019. A obra
             inacabada destaca-se por não focar na artista, com a identidade da modelo permanecendo desconhecida. Saiba
             mais sobre a trajetória artística de Frida Kahlo.</p>
         }
+    </div>
+
+    <div class="pesquisa">
+        <h2>Visualize artes atraves do link da imagem</h2>
+        <input [(ngModel)]="imagem" placeholder="Cole uma url aqui">
+        <img [src]="imagem" alt="">
     </div>
 </main>
