@@ -8,4 +8,19 @@ import { RouterLink, RouterLinkActive } from "@angular/router";
   templateUrl: './header.html',
   styleUrl: './header.css',
 })
-export class Header {}
+export class Header {
+  contador = 0;
+
+  incrementar() {
+    this.contador++;
+  }
+
+  botao() {
+    this.contador++;
+  }
+
+  zerar() {
+    this.contador = 0;
+  }
+}
+

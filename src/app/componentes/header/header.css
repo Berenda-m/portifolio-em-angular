@@ -54,7 +54,9 @@ nav a.pagina-ativa {
     padding: .5rem 1rem;
     border-radius: 8px;
 }
-
+.zerar{
+    margin-left: 2.5px;
+}
 
 @media (max-width: 768px) {
 
