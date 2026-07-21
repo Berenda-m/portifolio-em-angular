@@ -119,7 +119,7 @@
     </div>
 
     <div class="artistas">
-        <h2>Digite um artista e descubra um quadro</h2>
+        <h2>Nomeai um artista e vede uma de suas pinturas</h2>
 
         <input [(ngModel)]="texto" placeholder="Digite aqui">
         @if(texto.toLocaleLowerCase() === 'monet') {
@@ -144,7 +144,7 @@
     </div>
 
     <div class="pesquisa">
-        <h2>Visualize artes atraves do link da imagem</h2>
+        <h2>Vede pinturas através de URL</h2>
         <input [(ngModel)]="imagem" placeholder="Cole uma url aqui">
         <img [src]="imagem" alt="">
     </div>
