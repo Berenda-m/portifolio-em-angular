@@ -8,10 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './contato.css',
 })
 export class Contato {
-  usuario = ''
-  botao= ''
+  protected usuario = 'deslogado'
+  protected botao= 'entrar'
 
-  logado() {
+  protected logado() {
     if (this.usuario === 'logado') {
       this.usuario = 'deslogado';
       this.botao= 'entrar'

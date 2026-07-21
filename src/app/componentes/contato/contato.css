@@ -1,6 +1,6 @@
 main {
-margin-left: 100px ;
-    
+    margin-left: 100px;
+
 }
 
 
@@ -55,12 +55,12 @@ main p {
 }
 
 .logado {
-margin-bottom: 30px;
-color: darkred;
-font-size: 1rem;
+    margin-bottom: 30px;
+    color: darkred;
+    font-size: 1rem;
 }
 
-.logado button{
+.logado button {
     padding: 2px 10px;
     color: darkred;
     background-color: var(background-secondary);
@@ -69,13 +69,13 @@ font-size: 1rem;
     border-radius: 30px;
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
     main {
         padding: 3rem 1.5rem;
         margin-left: 30px;
     }
 
-     main h1 {
+    main h1 {
         font-size: 1.8rem;
         margin-left: 30px;
     }

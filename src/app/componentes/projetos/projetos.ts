@@ -10,6 +10,6 @@ import { FormsModule } from '@angular/forms';
 })
 export class Projetos {
 
-  texto: string = '';
-  imagem= '';
+  protected texto: string = '';
+  protected imagem = '';
 }

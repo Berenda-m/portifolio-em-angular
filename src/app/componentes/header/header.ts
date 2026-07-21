@@ -9,17 +9,17 @@ import { RouterLink, RouterLinkActive } from "@angular/router";
   styleUrl: './header.css',
 })
 export class Header {
-  contador: number = 0;
+  protected contador: number = 0;
 
-  incrementar() {
+  protected incrementar() {
     this.contador++;
   }
 
-  botao() {
+  protected botao() {
     this.contador++;
   }
 
-  zerar() {
+  protected zerar() {
     this.contador = 0;
   }
 }

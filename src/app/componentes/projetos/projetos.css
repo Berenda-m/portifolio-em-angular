@@ -104,7 +104,7 @@ h2 {
 
 
 .artistas h2 {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
 }
 
 .artistas p{
@@ -130,11 +130,13 @@ h2 {
 }
 
 .pesquisa img {
-    display: block;
     overflow: hidden;
-    border: 4px solid #f2d27a; 
     width: 250px; 
     object-fit: cover; 
+}
+
+.pesquisa h2{
+    font-size: 1.4rem;
 }
 
 @media (max-width: 768px) {

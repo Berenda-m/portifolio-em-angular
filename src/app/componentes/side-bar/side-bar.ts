@@ -10,7 +10,7 @@ import { RouterLink } from "@angular/router";
 })
 export class SideBar {
 
-voltarAoTopo(): void {
+protected voltarAoTopo(): void {
   window.scrollTo({
     top: 0,
     behavior: 'smooth'

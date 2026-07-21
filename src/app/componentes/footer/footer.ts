@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './footer.css',
 })
 export class Footer {
-  voltarAoTopo(): void {
+  protected voltarAoTopo(): void {
   window.scrollTo({
     top: 0,
     behavior: 'smooth'
