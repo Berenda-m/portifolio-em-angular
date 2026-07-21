@@ -6,6 +6,7 @@ import { Footer } from './componentes/footer/footer';
 import { Projetos } from './componentes/projetos/projetos';
 import { SideBar } from './componentes/side-bar/side-bar';
 
+
 export const routes: Routes = [
 
     { path: 'contato', component: Contato },
@@ -13,8 +14,4 @@ export const routes: Routes = [
     { path: 'projetos', component: Projetos },
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     {path: 'side-bar', component: SideBar}
-
-
-
-
 ];

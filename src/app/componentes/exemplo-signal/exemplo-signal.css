@@ -1,0 +1,7 @@
+p {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    max-width: 650px;
+}

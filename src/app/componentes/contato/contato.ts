@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-contato',
@@ -8,16 +8,16 @@ import { Component } from '@angular/core';
   styleUrl: './contato.css',
 })
 export class Contato {
-  protected usuario = 'deslogado'
-  protected botao= 'entrar'
+  protected usuario = signal ('deslogado')
+  protected botao= signal('entrar')
 
   protected logado() {
-    if (this.usuario === 'logado') {
-      this.usuario = 'deslogado';
-      this.botao= 'entrar'
-    } else{
-      this.usuario = 'logado';
-      this.botao = 'sair'
+    if (this.usuario() === 'logado') {
+      this.usuario.set('deslogado');
+      this.botao.set('entrar');
+    } else {
+      this.usuario.set ('logado');
+      this.botao.set('sair')
     }
   }
 }

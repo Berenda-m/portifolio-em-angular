@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from "@angular/router";
 
 @Component({
@@ -9,18 +9,18 @@ import { RouterLink, RouterLinkActive } from "@angular/router";
   styleUrl: './header.css',
 })
 export class Header {
-  protected contador: number = 0;
+  protected contador = signal<number>(0);
 
   protected incrementar() {
-    this.contador++;
+    this.contador.update(valor => valor + 1);
   }
 
   protected botao() {
-    this.contador++;
+    this.contador.update(valor => valor +1);
   }
 
   protected zerar() {
-    this.contador = 0;
+    this.contador.set (0);
   }
 }
 

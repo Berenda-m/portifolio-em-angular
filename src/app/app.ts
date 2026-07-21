@@ -10,10 +10,11 @@ import { SideBar } from './componentes/side-bar/side-bar';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, Header, Home, Footer, Contato, Projetos, SideBar],
+  imports: [RouterOutlet, Header, Footer, SideBar],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
+
 export class App {
   protected readonly title = signal('portifolio-em-angular');
 }
