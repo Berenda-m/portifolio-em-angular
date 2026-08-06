@@ -1,4 +1,13 @@
+
+<hr>
 <h1>Usuários</h1>
-<p>{{usuario().id}}</p>
-<p>{{usuario().nome}}</p>
-<p>{{usuario().idade}}</p>
+@for (usuario of usuario(); track usuario.id) {
+
+<div class="cards">
+    <article class="card">
+        <p>{{usuario.id}}</p>
+        <p>{{usuario.nome}}</p>
+        <p>{{usuario.idade}}</p>
+    </article>
+</div>
+}
