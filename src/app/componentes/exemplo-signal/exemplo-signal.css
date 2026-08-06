@@ -9,9 +9,8 @@ p {
 
 .cards {
     display: flex;
-    gap: 2rem;
     justify-content: center;
-    flex-wrap: wrap;
+    gap: 2rem;
     margin: 10px;
 
 }
@@ -39,4 +38,9 @@ hr {
     background: var(--border);
     margin: 2rem 0;
     opacity: .7;
+}
+
+article{
+    display: flex;
+    justify-content: center;
 }
