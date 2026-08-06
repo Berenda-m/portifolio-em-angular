@@ -1,10 +1,10 @@
 import { Component, signal } from '@angular/core';
 import { Produto } from './produto';
-import { form } from '@angular/forms/signals';
+import { form, FormField } from '@angular/forms/signals';
 
 @Component({
   selector: 'app-formulario',
-  imports: [],
+  imports: [FormField],
   templateUrl: './formulario.html',
   styleUrls: ['./formulario.css'],
 })
