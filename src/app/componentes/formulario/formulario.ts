@@ -17,4 +17,15 @@ export class Formulario {
   });
 
   produtoForm = form(this.produtoModel);
+
+
+  cadastrarProduto(event:SubmitEvent){
+  event.preventDefault();
+
+
+  const produto= this.produtoModel();
+  
+  console.log(produto);
+
+}
 }
