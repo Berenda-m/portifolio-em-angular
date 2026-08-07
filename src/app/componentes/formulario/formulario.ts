@@ -18,14 +18,26 @@ export class Formulario {
 
   produtoForm = form(this.produtoModel);
 
+  produtos = signal<Produto[]>([]);
 
-  cadastrarProduto(event:SubmitEvent){
-  event.preventDefault();
+  cadastrarProduto(event: SubmitEvent) {
+    event.preventDefault();
 
 
-  const produto= this.produtoModel();
-  
-  console.log(produto);
+    const produto = this.produtoModel();
 
-}
+    console.log(produto)
+
+    this.produtos.update(valor => [...valor, produto])
+
+    alert('Produto cadastrado');
+
+    this.produtoModel.set({
+      titulo: '',
+      descricao: '',
+      preco: null
+    })
+  }
+
+
 }
