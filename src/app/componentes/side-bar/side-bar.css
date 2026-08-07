@@ -54,7 +54,7 @@ a {
 @media (max-width: 768px) {
 
     .side-bar {
-        width: 45px;
+        width: 60px;
         align-items: center;
         gap: 1.5rem;
     }
