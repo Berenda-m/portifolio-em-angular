@@ -1,23 +1,23 @@
 <form (submit)="cadastrarProduto($event)">
-    <!--Titulo-->
-    <input type="text" [formField]="produtoForm.titulo" placeholder="digite aqui">
+   <!--Titulo-->
+   <input type="text" [formField]="produtoForm.titulo" placeholder="digite aqui">
 
-    <!--Descrição-->
-    <input type="text" [formField]="produtoForm.descricao" placeholder="digite aqui">
+   <!--Descrição-->
+   <input type="text" [formField]="produtoForm.descricao" placeholder="digite aqui">
 
-    <!--Preço-->
-    <input type="number" inputmode="numeric" [formField]="produtoForm.preco" placeholder="digite aqui">
+   <!--Preço-->
+   <input type="number" inputmode="numeric" [formField]="produtoForm.preco" placeholder="digite aqui">
 
 
-    <button>Cadastrar produto</button>
+   <button>Cadastrar produto</button>
 
-    @for (produto of produtos(); track $index) {
- <div>
-    <p>{{produto.titulo}}</p>
-    <p>{{produto.descricao}}</p>
-    <p>{{produto.preco}}</p>
-    
- </div>
+
+</form> 
+@for (produto of produtos(); track $index) {
+<div>
+   <p>{{produto.titulo}}</p>
+   <p>{{produto.descricao}}</p>
+   <p>{{produto.preco}}</p>
+
+</div>
 }
-
-</form>
