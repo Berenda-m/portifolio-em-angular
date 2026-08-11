@@ -15,5 +15,6 @@ export const routes: Routes = [
     { path: 'projetos', component: Projetos },
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     {path: 'side-bar', component: SideBar},
-    {path: 'login', component: Login}
+    {path: 'login', component: Login},
+    {path: 'alunos', component: alunos}
 ];
