@@ -5,6 +5,7 @@ import { Home } from './componentes/home/home';
 import { Footer } from './componentes/footer/footer';
 import { Projetos } from './componentes/projetos/projetos';
 import { SideBar } from './componentes/side-bar/side-bar';
+import { Login } from './componentes/login/login';
 
 
 export const routes: Routes = [
@@ -13,5 +14,6 @@ export const routes: Routes = [
     { path: 'home', component: Home },
     { path: 'projetos', component: Projetos },
     { path: '', redirectTo: 'home', pathMatch: 'full' },
-    {path: 'side-bar', component: SideBar}
+    {path: 'side-bar', component: SideBar},
+    {path: 'login', component: Login}
 ];

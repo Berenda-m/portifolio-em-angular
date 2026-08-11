@@ -1,0 +1,13 @@
+<h1>Entrar na sua conta</h1>
+
+<form (submit)="efetuarLogin($event)">
+
+<input type="email" [formField]="loginForm.email" placeholder="email@.com">
+<input type="password" [formField]="loginForm.senha" placeholder="senha">
+
+<button>Fazer Login</button>
+
+
+</form>
+
+<p>O usuario @if(!estaLogado()){não} está logado</p>

@@ -6,6 +6,7 @@ import { Footer } from './componentes/footer/footer';
 import { Contato } from './componentes/contato/contato';
 import { Projetos } from './componentes/projetos/projetos';
 import { SideBar } from './componentes/side-bar/side-bar';
+import { Login } from './componentes/login/login';
 
 @Component({
   selector: 'app-root',
