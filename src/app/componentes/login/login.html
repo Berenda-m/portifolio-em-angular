@@ -11,7 +11,7 @@
 
 
 <input type="password" [formField]="loginForm.senha" placeholder="senha">
-@if(loginForm.senha().touched() && loginForm.senha().invalid){
+@if(loginForm.senha().touched() && loginForm.senha().invalid()){
     @for(error of loginForm.senha().errors(); track error.kind){
         <span>{{error.message}}</span>
     }
@@ -23,3 +23,5 @@
 </form>
 
 <p>O usuario @if(!estaLogado()){não} está logado</p>
+
+<app-alunos></app-alunos>

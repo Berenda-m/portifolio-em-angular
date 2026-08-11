@@ -1,11 +1,12 @@
 import { Component, signal, Signal } from '@angular/core';
 import { email, form, FormField, required } from "@angular/forms/signals";
 import { LoginInterface } from '../../interfaces/login-interface';
+import { Alunos } from '../alunos/alunos';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormField],
+  imports: [FormField, Alunos],
   templateUrl: './login.html',
   styleUrls: ['./login.css'],
 })
