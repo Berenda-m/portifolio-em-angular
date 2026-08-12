@@ -6,7 +6,12 @@
 
  <button type="button" (click)="cadastrarAluno()">Cadastrar Aluno</button>
 
+@for (aluno of alunos() track $index) { 
+   <p>{{aluno.nome}}</p>
+<p>{{aluno.media}}</p>
 
+
+}
 
 
 </form>
