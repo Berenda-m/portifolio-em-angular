@@ -65,7 +65,7 @@ p {
   font-size: 25px;
 }
 
-h1{
+h1 {
   text-align: center;
 }
 
@@ -126,15 +126,20 @@ h1{
   }
 
   .card-aluno {
-  width: 100%;
-}
-.card-aluno img {
-  width: 120px;
-  height: 120px;
-  margin-right: -10px;
-}
+    width: 240px;
+  }
+
+  .card-aluno img {
+    width: 90px;
+    height: 120px;
+  }
+
   .card-aluno p {
-  margin: 5px 0;
-  text-align: left;
-}
+    margin: 4px 0px;
+    text-align: left;
+  }
+
+  h1 {
+    text-align: center;
+  }
 }
