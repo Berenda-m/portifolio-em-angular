@@ -1,17 +1,44 @@
-<form>
- <input type="text" placeholder="Digite o nome do aluno" [formField]="alunoForm.nome">
+<form (submit)="cadastrarAluno($event)">
+   <input type="text" placeholder="Digite o nome do aluno" [formField]="alunoForm.nome">
+   @if (alunoForm.nome().touched() && alunoForm.media().invalid()) {
+   @for (error of alunoForm.nome().errors(); track error.kind) {
+   <span>{{error.message}}</span>
+   }
+   }
 
- <input type="text" placeholder="Digite a nota" [formField]="alunoForm.media">
+   <input type="number" placeholder="Digite a nota" [formField]="alunoForm.media">
+   @if (alunoForm.media().touched() && alunoForm.media().invalid()) {
+   @for (error of alunoForm.media().errors(); track error.kind) {
+   <span>{{error.message}}</span>
+   }
+   }
 
 
- <button type="button" (click)="cadastrarAluno()">Cadastrar Aluno</button>
+   <button type="submit">Cadastrar Aluno</button>
 
-@for (aluno of alunos() track $index) { 
+   @for (aluno of alunos(); track $index) {
+      <div class="card-aluno">
    <p>{{aluno.nome}}</p>
-<p>{{aluno.media}}</p>
+   <p>{{aluno.media}}</p>
 
+   @if (aluno.media >= 9) {
+   <p class="aprovado">Aprovado</p>
+   <img src="images/aprovado.gif" alt="gato com rosa" width="120">
+   }
 
-}
+   @else if (aluno.media >= 7) {
+   <p class="aprovado">Aprovado</p>
+   <img src="images/aprovado.gif" alt="gato com rosa" width="120">
+   }
+   @else if (aluno.media <= 6) {
+      <p class="reprovado">Reprovado</p>
+      <img src="images/reprovado.gif" alt="gato rindo" width="120">
+   }
+   @else {
+      <p>Nota inválida</p>
+   }
+</div>
 
+   }
 
 </form>

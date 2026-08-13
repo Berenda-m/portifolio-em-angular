@@ -14,7 +14,7 @@ export class Alunos {
   protected alunoModel = signal<Aluno>(
     {
     nome: '',
-    media: ''
+    media: 0
   })
 
   protected alunos= signal<Aluno[]>([])
@@ -24,7 +24,9 @@ export class Alunos {
     required(s.media, {message: 'nota inválida'})
   })
 
-  protected cadastrarAluno() {
+  protected cadastrarAluno(event: SubmitEvent) {
+    event.preventDefault()
     this.alunos.update(lista => [...lista, this.alunoModel()]);
   }
+
 }
