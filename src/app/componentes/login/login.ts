@@ -1,7 +1,8 @@
-import { Component, signal, Signal } from '@angular/core';
+import { Component, inject, signal, Signal } from '@angular/core';
 import { email, form, FormField, required } from "@angular/forms/signals";
 import { LoginInterface } from '../../interfaces/login-interface';
 import { Alunos } from '../alunos/alunos';
+import { LoginService } from './login-service';
 
 @Component({
   selector: 'app-login',
@@ -11,6 +12,8 @@ import { Alunos } from '../alunos/alunos';
   styleUrls: ['./login.css'],
 })
 export class Login {
+
+  protected readonly loginService= inject(LoginService)
 
   protected loginModel = signal<LoginInterface>({
     email: '',
@@ -24,7 +27,7 @@ export class Login {
   });
 
 
-  protected estaLogado = signal<boolean>(false);
+  //protected estaLogado = signal<boolean>(false);
 
   protected efetuarLogin(event: SubmitEvent) {
     event.preventDefault();
@@ -32,7 +35,7 @@ export class Login {
     const login = this.loginModel();
 
     if (login.email === 'brenda@email.com' && login.senha === 'senha') {
-      this.estaLogado.set(true)
+      this.loginService.estaLogado.set(true)
     }
   }
 }
