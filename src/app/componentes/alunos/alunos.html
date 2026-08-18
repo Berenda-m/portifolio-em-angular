@@ -17,7 +17,7 @@
 
    <button type="submit">Cadastrar Aluno</button>
 
-   @for (aluno of alunos(); track $index) {
+   @for (aluno of alunosService.alunos(); track $index) {
       <div class="card-aluno">
    <p>{{aluno.nome}}</p>
    <p>{{aluno.media}}</p>
