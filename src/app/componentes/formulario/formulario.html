@@ -8,7 +8,7 @@
    <input type="text" [formField]="produtoForm.descricao" placeholder="Descricao do produto">
 
    <!--Preço-->
-   <input type="number" inputmode="numeric" [formField]="produtoForm.preco" placeholder="Valor do produto">
+   <input type="text" inputmode="decimal" [formField]="produtoForm.preco" placeholder="Valor do produto">
 
 
    <button>Cadastrar produto</button>
@@ -16,7 +16,7 @@
 
 </form> 
 @for (produto of formularioService.produtos(); track $index) {
-<div>
+<div class="card-produto">
    <p><i class="fa-solid fa-cart-shopping"></i>  {{produto.titulo}}</p>
    <p><i class="fa-solid fa-list"></i>  {{produto.descricao}}</p>
    <p><i class="fa-solid fa-money-bill-1"></i>  {{produto.preco}}</p>
