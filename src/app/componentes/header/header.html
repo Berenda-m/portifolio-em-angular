@@ -11,8 +11,8 @@
                 <a class="pagina-ativa" routerLink="/projetos" routerLinkActive='pagina-ativa'>Projetos</a>
             </li>
             <li><a class="pagina-ativa" routerLink="/contato" routerLinkActive='pagina-ativa'>Contatos</a></li>
-            <li><a (click)="incrementar()" routerLink="/header"><i class="fa-solid fa-plus"></i></a>
-                <p class="zerar" (click)="zerar()">{{contador()}}</p>
+            <li><a (click)="this.contadorService.incrementar()" routerLink="/header"><i class="fa-solid fa-plus"></i></a>
+                <p class="zerar" (click)="this.contadorService.zerar()">{{contadorService.contador()}}</p>
             </li>
 
         </ul>

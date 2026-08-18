@@ -1,5 +1,6 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from "@angular/router";
+import { ContadorService } from './contador-service';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,10 @@ import { RouterLink, RouterLinkActive } from "@angular/router";
   styleUrl: './header.css',
 })
 export class Header {
-  protected contador = signal<number>(0);
+
+  protected readonly contadorService = inject(ContadorService); 
+
+ /* protected contador = signal<number>(0);
 
   protected incrementar() {
     this.contador.update(valor => valor + 1);
@@ -21,6 +25,6 @@ export class Header {
 
   protected zerar() {
     this.contador.set (0);
-  }
+  }*/
 }
 
