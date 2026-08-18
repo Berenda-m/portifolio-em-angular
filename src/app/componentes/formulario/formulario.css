@@ -2,24 +2,19 @@ form {
     width: 400px;
     margin: 30px auto;
     padding: 30px;
-
     background: var(--background-secondary);
     border: 2px solid var(--primary);
     border-radius: 5px;
-
     box-shadow: 5px 5px 0 var(--accent);
 }
 
 input {
     width: 100%;
     box-sizing: border-box;
-
     padding: 10px;
     margin-bottom: 8px;
-
     border: 1px solid var(--primary);
     border-radius: 4px;
-
     font-family: "Cormorant Garamond", serif;
     font-size: 17px;
 }
@@ -33,16 +28,12 @@ button {
     width: 100%;
     padding: 10px;
     margin-top: 10px;
-
     background: var(--primary);
     color: white;
-
     border: none;
     border-radius: 4px;
-
     font-family: "Cormorant Garamond", serif;
     font-size: 18px;
-
     cursor: pointer;
 }
 
@@ -53,8 +44,23 @@ button:hover {
 h1 {
     text-align: center;
     margin-top: 40px;
-
     color: var(--dark);
     font-family: "Cormorant Garamond", serif;
 }
 
+div {
+    display: flex;
+    flex-direction: column;
+    
+}
+div p{
+    margin: 8px 8px;
+    color: palevioletred;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+i{
+    font-size: 1.2rem ;
+    color: darkgreen;
+}

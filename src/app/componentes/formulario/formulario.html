@@ -2,24 +2,24 @@
 <h1>Teste de produtos</h1>
 <form (submit)="cadastrarProduto($event)">
    <!--Titulo-->
-   <input type="text" [formField]="produtoForm.titulo" placeholder="digite aqui">
+   <input type="text" [formField]="produtoForm.titulo" placeholder="Nome do produto">
 
    <!--Descrição-->
-   <input type="text" [formField]="produtoForm.descricao" placeholder="digite aqui">
+   <input type="text" [formField]="produtoForm.descricao" placeholder="Descricao do produto">
 
    <!--Preço-->
-   <input type="number" inputmode="numeric" [formField]="produtoForm.preco" placeholder="digite aqui">
+   <input type="number" inputmode="numeric" [formField]="produtoForm.preco" placeholder="Valor do produto">
 
 
    <button>Cadastrar produto</button>
 
 
 </form> 
-@for (produto of produtos(); track $index) {
+@for (produto of formularioService.produtos(); track $index) {
 <div>
-   <p>{{produto.titulo}}</p>
-   <p>{{produto.descricao}}</p>
-   <p>{{produto.preco}}</p>
+   <p><i class="fa-solid fa-cart-shopping"></i>  {{produto.titulo}}</p>
+   <p><i class="fa-solid fa-list"></i>  {{produto.descricao}}</p>
+   <p><i class="fa-solid fa-money-bill-1"></i>  {{produto.preco}}</p>
 
 </div>
 }
