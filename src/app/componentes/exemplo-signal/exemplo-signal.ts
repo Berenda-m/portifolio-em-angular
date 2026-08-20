@@ -1,6 +1,7 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { Usuario } from '../../interfaces/usuario';
 import { FormsModule } from '@angular/forms';
+import { UsuariosService } from './usuarios-service';
 
 @Component({
   selector: 'app-exemplo-signal',
@@ -11,28 +12,8 @@ import { FormsModule } from '@angular/forms';
 })
 export class ExemploSignal {
 
-  protected usuario = signal<Usuario[]>([
+  protected readonly usuariosService =  inject (UsuariosService);
 
-    {
-      id: 1,
-      nome: 'Brenda',
-      idade: 28
-    },
-    {
-      id: 2,
-      nome: 'Otto',
-      idade: 6
-    },
-  {
-    id: 3,
-    nome: 'Max',
-    idade: 4
-  },
-  {
-    id: 4,
-    nome: 'Yuri',
-    idade: 39
-  }
-  ]);
+
 
 }
