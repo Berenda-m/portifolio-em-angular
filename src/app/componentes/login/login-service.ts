@@ -6,7 +6,14 @@ import { LoginInterface } from '../../interfaces/login-interface';
 })
 export class LoginService {
 
-estaLogado = signal<boolean>(false);
+autenticarUsuario(credenciais: LoginInterface){
+  if (credenciais.email === 'brenda@email.com' && credenciais.senha === 'senha') {
+     return true;
+    }
+else{
+  return false;
+}
+}
 
 
 }
