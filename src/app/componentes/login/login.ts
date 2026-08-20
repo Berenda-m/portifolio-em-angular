@@ -33,6 +33,7 @@ export class Login {
     event.preventDefault();
 
     const login = this.loginModel();
+    
     const logou = this.loginService.autenticarUsuario(login);
 
     if (logou === true) {

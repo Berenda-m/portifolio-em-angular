@@ -6,14 +6,8 @@ import { LoginInterface } from '../../interfaces/login-interface';
 })
 export class LoginService {
 
-autenticarUsuario(credenciais: LoginInterface){
-  if (credenciais.email === 'brenda@email.com' && credenciais.senha === 'senha') {
-     return true;
-    }
-else{
-  return false;
-}
-}
+autenticarUsuario(credenciais: LoginInterface): boolean {
+  return credenciais.email === 'brenda@email.com' && credenciais.senha === 'senha'}
 
 
 }
