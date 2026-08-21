@@ -3,11 +3,12 @@ import { email, form, FormField, required } from "@angular/forms/signals";
 import { LoginInterface } from '../../interfaces/login-interface';
 import { Alunos } from '../alunos/alunos';
 import { LoginService } from './login-service';
+import { FormularioExercicios } from '../formulario-exercicios/formulario-exercicios';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormField, Alunos],
+  imports: [FormField, Alunos, FormularioExercicios],
   templateUrl: './login.html',
   styleUrls: ['./login.css'],
 })

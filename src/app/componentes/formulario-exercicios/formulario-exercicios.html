@@ -1,0 +1,21 @@
+<h1>Exercicios de API</h1>
+
+<form>
+
+<input type="number" [formField]="formularioForm.userId" placeholder="Digite Aqui">
+@if (formularioForm.userId().touched()&& formularioForm.userId().invalid()) {}
+@for (error of formularioForm.userId().errors(); track error.kind) {
+    <span>{{error.message}};
+    </span>
+}
+
+<input type="text" [formField]="formularioForm.title" placeholder="Digite aqui">
+
+
+<input type="text"[formField]="formularioForm.body" placeholder="Digite Aqui">
+
+
+<button>Fazer cadastro</button>
+
+
+</form>

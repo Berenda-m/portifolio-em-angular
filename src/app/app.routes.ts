@@ -7,6 +7,7 @@ import { Projetos } from './componentes/projetos/projetos';
 import { SideBar } from './componentes/side-bar/side-bar';
 import { Login } from './componentes/login/login';
 import { Alunos } from './componentes/alunos/alunos';
+import { FormularioExercicios } from './componentes/formulario-exercicios/formulario-exercicios';
 
 
 export const routes: Routes = [
@@ -17,5 +18,6 @@ export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     {path: 'side-bar', component: SideBar},
     {path: 'login', component: Login},
-    {path: 'alunos', component: Alunos}
+    {path: 'alunos', component: Alunos},
+    {path: 'formularios-exercicios', component: FormularioExercicios}
 ];
