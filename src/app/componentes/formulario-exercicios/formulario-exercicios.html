@@ -1,21 +1,32 @@
 <h1>Exercicios de API</h1>
 
-<form>
+<form (submit)="cadastroUsuario($event)">
 
-<input type="number" [formField]="formularioForm.userId" placeholder="Digite Aqui">
-@if (formularioForm.userId().touched()&& formularioForm.userId().invalid()) {}
-@for (error of formularioForm.userId().errors(); track error.kind) {
-    <span>{{error.message}};
-    </span>
+    <input type="number" [formField]="formularioForm.userId" placeholder="Digite Aqui">
+    @if (formularioForm.userId().touched()&& formularioForm.userId().invalid()) {@for (error of
+    formularioForm.userId().errors(); track error.kind) {
+    <span>{{error.message}}
+    </span>}
+
+    }
+
+    <input type="text" [formField]="formularioForm.title" placeholder="Digite aqui">
+@if (formularioForm.title().touched()&& formularioForm.title().invalid()) {
+    @for (error of formularioForm.title().errors(); track error.kind) {
+        <span>{{error.message}}</span>
+    }
 }
 
-<input type="text" [formField]="formularioForm.title" placeholder="Digite aqui">
+    <input type="text" [formField]="formularioForm.body" placeholder="Digite Aqui">
+    @if (formularioForm.body().touched()&& formularioForm.body().invalid()) {
+        @for (error of formularioForm.body().errors(); track error.kind) {
+            <span>{{error.message}}</span>
+        }
+    }
 
 
-<input type="text"[formField]="formularioForm.body" placeholder="Digite Aqui">
-
-
-<button>Fazer cadastro</button>
-
+    <button type="submit">Fazer cadastro</button>
 
 </form>
+
+

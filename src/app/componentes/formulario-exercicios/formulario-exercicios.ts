@@ -1,19 +1,25 @@
-import { Component, signal } from '@angular/core';
-import { FormularioExercicios as IFormularioExercicios } from '../../interfaces/formulario-exercicios';
+import { Component, inject, signal } from '@angular/core';
 import { form, FormField, required } from "@angular/forms/signals";
+import { FormularioService } from '../formulario/formulario-service';
+import { Formularioapi } from '../../interfaces/formularioapi';
+import { ApiService } from './api-service';
 
 @Component({
   selector: 'app-formulario-exercicios',
   templateUrl: './formulario-exercicios.html',
   styleUrl: './formulario-exercicios.css',
-  imports: [FormField],
+  imports: [FormField]
 })
 export class FormularioExercicios {
-  protected fomularioExerciciosModel = signal<IFormularioExercicios>({
-    userId: 0,
-    title: '',
-    body: '',
-  });
+
+
+  protected readonly apiservice= inject(ApiService)
+
+  protected fomularioExerciciosModel = signal<Formularioapi>({
+    userId: null,
+    title:'',
+    body:''
+  })
 
 
   protected formularioForm = form(this.fomularioExerciciosModel, (s) =>{
@@ -23,4 +29,27 @@ export class FormularioExercicios {
 
 
 })
+protected cadastroUsuario(event: SubmitEvent){
+  event.preventDefault();
+  const post= this.fomularioExerciciosModel();
+
+  this.apiservice.cadastrarPostDoService(post).subscribe({
+    next: () =>{
+      alert('Post Cadastrado')
+      this.fomularioExerciciosModel.set({
+        userId: null,
+        title:'',
+        body:'' 
+      });
+      this.formularioForm().reset();
+    }, 
+    error: () => {
+      console.log('erro')
+      alert('Algo deu errado')
+    }
+  })
+
 }
+
+}
+

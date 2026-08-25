@@ -16,7 +16,7 @@ export class Formulario {
   produtoModel = signal<Produto>({
     titulo: '',
     descricao: '',
-    preco: null
+    preco: ''
   });
 
   produtoForm = form(this.produtoModel);
@@ -39,7 +39,7 @@ export class Formulario {
     this.produtoModel.set({
       titulo: '',
       descricao: '',
-      preco: null
+      preco: ''
     })
   }
 
