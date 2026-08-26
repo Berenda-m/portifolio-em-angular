@@ -84,3 +84,23 @@ p {
     box-shadow: 3px 3px 0 var(--accent);
 
 }
+@media (max-width: 768px) {
+
+    form {
+        width: 70%;
+        padding: 20px;
+        box-sizing: border-box;
+        margin-left: 85px;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-left: 85px;
+    }
+
+    p {
+
+        margin-left: 85px;
+        width: 70%;
+    }
+}
