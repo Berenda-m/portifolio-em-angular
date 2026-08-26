@@ -22,10 +22,9 @@ export class ApiService {
  }
 
 
- alterarPostDoService(id: number, postAlterado: PutInterface){
-  return this.http.put<Formularioapi>
+ atualizarPost(postAtualizado: PutInterface){
+  return this.http.put<PutInterface>(`${this.urlApi}/${postAtualizado.id}`, postAtualizado);
 
-  (this.urlApi, postAlterado)
  }
 
 

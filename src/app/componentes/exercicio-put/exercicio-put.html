@@ -1,7 +1,7 @@
 <h1>Exercicio Put</h1>
 
 
-<form (submit)="cadastroUsuario($event)">
+<form (submit)="atualizarPost($event)">
 
    <input type="number" [formField]="exercicioPutForm.id" placeholder="Digite Aqui ID">
     @if (exercicioPutForm.id().touched()&& exercicioPutForm.id().invalid()) {@for (error of
@@ -10,7 +10,7 @@
     </span>}
     }
 
-    <input type="text" [formField]="exercicioPutForm.userId"  placeholder="Digite aqui UserId">
+    <input type="number" [formField]="exercicioPutForm.userId"  placeholder="Digite aqui UserId">
     @if (exercicioPutForm.userId().touched() && exercicioPutForm.userId().invalid()) {
         @for (error of exercicioPutForm.userId().errors(); track error.kind) {}
     }
