@@ -5,11 +5,12 @@ import { Alunos } from '../alunos/alunos';
 import { LoginService } from './login-service';
 import { FormularioExercicios } from '../formulario-exercicios/formulario-exercicios';
 import { ExercicioPut } from '../exercicio-put/exercicio-put';
+import { ExercicioDelete } from '../exercicio-delete/exercicio-delete';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormField, Alunos, FormularioExercicios, ExercicioPut],
+  imports: [FormField, Alunos, FormularioExercicios, ExercicioPut, ExercicioDelete],
   templateUrl: './login.html',
   styleUrls: ['./login.css'],
 })

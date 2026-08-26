@@ -9,6 +9,7 @@ import { Login } from './componentes/login/login';
 import { Alunos } from './componentes/alunos/alunos';
 import { FormularioExercicios } from './componentes/formulario-exercicios/formulario-exercicios';
 import { ExercicioPut } from './componentes/exercicio-put/exercicio-put';
+import { ExercicioDelete } from './componentes/exercicio-delete/exercicio-delete';
 
 
 export const routes: Routes = [
@@ -21,5 +22,6 @@ export const routes: Routes = [
     {path: 'login', component: Login},
     {path: 'alunos', component: Alunos},
     {path: 'formularios-exercicios', component: FormularioExercicios},
-    {path:'exercicios-put', component: ExercicioPut}
+    {path:'exercicios-put', component: ExercicioPut},
+    {path: 'exercicios-delete',component: ExercicioDelete}
 ];
