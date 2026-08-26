@@ -8,6 +8,7 @@ import { SideBar } from './componentes/side-bar/side-bar';
 import { Login } from './componentes/login/login';
 import { Alunos } from './componentes/alunos/alunos';
 import { FormularioExercicios } from './componentes/formulario-exercicios/formulario-exercicios';
+import { ExercicioPut } from './componentes/exercicio-put/exercicio-put';
 
 
 export const routes: Routes = [
@@ -19,5 +20,6 @@ export const routes: Routes = [
     {path: 'side-bar', component: SideBar},
     {path: 'login', component: Login},
     {path: 'alunos', component: Alunos},
-    {path: 'formularios-exercicios', component: FormularioExercicios}
+    {path: 'formularios-exercicios', component: FormularioExercicios},
+    {path:'exercicios-put', component: ExercicioPut}
 ];

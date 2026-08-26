@@ -4,11 +4,12 @@ import { LoginInterface } from '../../interfaces/login-interface';
 import { Alunos } from '../alunos/alunos';
 import { LoginService } from './login-service';
 import { FormularioExercicios } from '../formulario-exercicios/formulario-exercicios';
+import { ExercicioPut } from '../exercicio-put/exercicio-put';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormField, Alunos, FormularioExercicios],
+  imports: [FormField, Alunos, FormularioExercicios, ExercicioPut],
   templateUrl: './login.html',
   styleUrls: ['./login.css'],
 })

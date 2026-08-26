@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable, signal } from '@angular/core';
 import { Formularioapi } from '../../interfaces/formularioapi';
+import { ExercicioPut } from '../exercicio-put/exercicio-put';
+import { PutInterface } from '../../interfaces/put-interface';
 
 @Injectable({
   providedIn: 'root',
@@ -20,9 +22,11 @@ export class ApiService {
  }
 
 
- alterarPostDoService(id: number, postAlterado: Formularioapi){
+ alterarPostDoService(id: number, postAlterado: PutInterface){
   return this.http.put<Formularioapi>
 
   (this.urlApi, postAlterado)
  }
+
+
 }

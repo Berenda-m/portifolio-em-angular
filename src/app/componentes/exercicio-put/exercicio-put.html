@@ -1,0 +1,30 @@
+<h1>Exercicio Put</h1>
+
+
+<form (submit)="cadastroUsuario($event)">
+
+   <input type="number" [formField]="exercicioPutForm.id" placeholder="Digite Aqui ID">
+    @if (exercicioPutForm.id().touched()&& exercicioPutForm.id().invalid()) {@for (error of
+    exercicioPutForm.id().errors(); track error.kind) {
+    <span>{{error.message}}
+    </span>}
+    }
+
+    <input type="text" [formField]="exercicioPutForm.userId"  placeholder="Digite aqui UserId">
+    @if (exercicioPutForm.userId().touched() && exercicioPutForm.userId().invalid()) {
+        @for (error of exercicioPutForm.userId().errors(); track error.kind) {}
+    }
+
+   <input type="text" [formField]="exercicioPutForm.title"  placeholder="Digite aqui Title">
+    @if (exercicioPutForm.title().touched() && exercicioPutForm.title().invalid()) {
+        @for (error of exercicioPutForm.title().errors(); track error.kind) {}
+    }
+
+ <input type="text" [formField]="exercicioPutForm.body"  placeholder="Digite aqui Body">
+    @if (exercicioPutForm.body().touched() && exercicioPutForm.body().invalid()) {
+        @for (error of exercicioPutForm.body().errors(); track error.kind) {}
+    }
+
+<button type="submit">Put</button>
+
+</form>
