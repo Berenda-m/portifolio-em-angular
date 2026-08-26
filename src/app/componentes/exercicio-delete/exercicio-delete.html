@@ -1,8 +1,9 @@
 <h1>Exercicio Delete</h1>
-<form>
 
-    <input type="number"  placeholder="Digite Aqui ID">
+<form (submit)="deletePost($event)">
 
-<button>Delete</button>
+    <input type="number" [formField]="deleteForm.id" placeholder="Digite Aqui ID">
+
+<button type="submit">Delete</button>
 
 </form>

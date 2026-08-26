@@ -3,6 +3,7 @@ import { inject, Injectable, signal } from '@angular/core';
 import { Formularioapi } from '../../interfaces/formularioapi';
 import { ExercicioPut } from '../exercicio-put/exercicio-put';
 import { PutInterface } from '../../interfaces/put-interface';
+import { DeleteInterface } from '../../interfaces/delete-interface';
 
 @Injectable({
   providedIn: 'root',
@@ -27,5 +28,7 @@ export class ApiService {
 
  }
 
-
+deletePost(postAtualizado:DeleteInterface){
+  return this.http.delete<DeleteInterface>(`${this.urlApi}/${postAtualizado.id}`)
+}
 }
