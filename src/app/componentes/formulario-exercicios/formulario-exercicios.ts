@@ -34,8 +34,8 @@ protected cadastroUsuario(event: SubmitEvent){
   const post= this.fomularioExerciciosModel();
 
   this.apiservice.cadastrarPostDoService(post).subscribe({
-    next: () =>{
-      alert('Post Cadastrado')
+    next: (response) =>{
+      alert('Post Cadastrado com id:' + response.id )
       this.fomularioExerciciosModel.set({
         userId: null,
         title:'',

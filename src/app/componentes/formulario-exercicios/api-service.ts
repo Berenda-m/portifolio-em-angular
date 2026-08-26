@@ -4,6 +4,7 @@ import { Formularioapi } from '../../interfaces/formularioapi';
 import { ExercicioPut } from '../exercicio-put/exercicio-put';
 import { PutInterface } from '../../interfaces/put-interface';
 import { DeleteInterface } from '../../interfaces/delete-interface';
+import { PostResponse } from '../../interfaces/post-response';
 
 @Injectable({
   providedIn: 'root',
@@ -17,9 +18,7 @@ export class ApiService {
   readonly fomularioApi= signal<Formularioapi[]>([]);
 
  cadastrarPostDoService(postCadastrado: Formularioapi){
-  return this.http.post<Formularioapi>
-  
-    (this.urlApi, postCadastrado);
+  return this.http.post<PostResponse>(this.urlApi, postCadastrado);
  }
 
 
