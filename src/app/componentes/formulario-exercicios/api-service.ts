@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, httpResource } from '@angular/common/http';
 import { inject, Injectable, signal } from '@angular/core';
 import { Formularioapi } from '../../interfaces/formularioapi';
 import { ExercicioPut } from '../exercicio-put/exercicio-put';
@@ -7,6 +7,7 @@ import { DeleteInterface } from '../../interfaces/delete-interface';
 import { PostResponse } from '../../interfaces/post-response';
 import { PutResponse } from '../../interfaces/put-response';
 import { DeleteResponse } from '../../interfaces/delete-response';
+import { GetResponse } from '../../interfaces/get-response';
 
 @Injectable({
   providedIn: 'root',
@@ -32,4 +33,10 @@ export class ApiService {
 deletePost(postAtualizado:DeleteInterface){
   return this.http.delete<DeleteResponse>(`${this.urlApi}/${postAtualizado.id}`)
 }
+
+readonly postsDetails = httpResource<GetResponse[]>(
+  () => this.urlApi, 
+  {defaultValue: []}
+);
+
 }

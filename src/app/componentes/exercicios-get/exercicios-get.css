@@ -1,0 +1,37 @@
+h1 {
+    text-align: center;
+    margin-top: 40px;
+
+    color: var(--dark);
+    font-family: "Cormorant Garamond", serif;
+}
+p {
+    width: 50%;
+    margin: 25px auto;
+    padding: 10px 20px;
+    background: var(--background-secondary);
+    border: 1px solid var(--accent);
+    border-left: 5px solid var(--dark);
+    border-radius: 3px;
+    color: var(--dark);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px;
+    font-style: italic;
+    box-shadow: 3px 3px 0 var(--accent);
+
+}
+
+@media (max-width: 768px) {
+
+
+    h1 {
+        font-size: 28px;
+        margin-left: 85px;
+    }
+
+    p {
+
+        margin-left: 85px;
+        width: 70%;
+    }
+}

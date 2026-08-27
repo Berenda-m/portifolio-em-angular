@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ApiService } from '../formulario-exercicios/api-service';
 
 @Component({
   selector: 'app-exercicios-get',
@@ -6,4 +7,8 @@ import { Component } from '@angular/core';
   templateUrl: './exercicios-get.html',
   styleUrl: './exercicios-get.css',
 })
-export class ExerciciosGet {}
+export class ExerciciosGet {
+
+  protected readonly apiservice= inject(ApiService);
+
+}

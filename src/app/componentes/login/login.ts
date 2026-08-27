@@ -6,11 +6,12 @@ import { LoginService } from './login-service';
 import { FormularioExercicios } from '../formulario-exercicios/formulario-exercicios';
 import { ExercicioPut } from '../exercicio-put/exercicio-put';
 import { ExercicioDelete } from '../exercicio-delete/exercicio-delete';
+import { ExerciciosGet } from '../exercicios-get/exercicios-get';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormField, Alunos, FormularioExercicios, ExercicioPut, ExercicioDelete],
+  imports: [FormField, Alunos, FormularioExercicios, ExercicioPut, ExercicioDelete, ExerciciosGet],
   templateUrl: './login.html',
   styleUrls: ['./login.css'],
 })

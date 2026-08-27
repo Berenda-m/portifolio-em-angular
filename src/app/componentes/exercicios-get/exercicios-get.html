@@ -1,1 +1,6 @@
-<p>exercicios-get works!</p>
+
+@for (postDetails of apiservice.postsDetails.value(); track postDetails.id) {
+<h1>{{postDetails.id}}</h1>
+<p>{{postDetails.body}}</p>
+}
+
