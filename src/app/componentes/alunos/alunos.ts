@@ -17,7 +17,7 @@ export class Alunos {
   protected alunoModel = signal<Aluno>(
     {
     nome: '',
-    media: 0
+    media: null
   })
 
   //protected alunos= signal<Aluno[]>([])//
@@ -32,7 +32,7 @@ export class Alunos {
     this.alunosService.cadastrarAluno(this.alunoModel());
     this.alunoForm().reset({
       nome: '',
-      media: 0
+      media: null
     });
   }
 }
