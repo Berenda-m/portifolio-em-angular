@@ -23,8 +23,8 @@ export class ExercicioDelete {
     event.preventDefault();
 
     this.ApiService.deletePost(this.exercicioDeleteModel()).subscribe({
-      next: () =>{
-        alert('Cadastro deletado');
+      next: (response) =>{
+        alert('Cadastro deletado id: ' + response.id);
         this.exercicioDeleteModel.set({
           id: null
         });

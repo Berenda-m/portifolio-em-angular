@@ -5,6 +5,8 @@ import { ExercicioPut } from '../exercicio-put/exercicio-put';
 import { PutInterface } from '../../interfaces/put-interface';
 import { DeleteInterface } from '../../interfaces/delete-interface';
 import { PostResponse } from '../../interfaces/post-response';
+import { PutResponse } from '../../interfaces/put-response';
+import { DeleteResponse } from '../../interfaces/delete-response';
 
 @Injectable({
   providedIn: 'root',
@@ -23,11 +25,11 @@ export class ApiService {
 
 
  atualizarPost(postAtualizado: PutInterface){
-  return this.http.put<PutInterface>(`${this.urlApi}/${postAtualizado.id}`, postAtualizado);
+  return this.http.put<PutResponse>(`${this.urlApi}/${postAtualizado.id}`, postAtualizado);
 
  }
 
 deletePost(postAtualizado:DeleteInterface){
-  return this.http.delete<DeleteInterface>(`${this.urlApi}/${postAtualizado.id}`)
+  return this.http.delete<DeleteResponse>(`${this.urlApi}/${postAtualizado.id}`)
 }
 }

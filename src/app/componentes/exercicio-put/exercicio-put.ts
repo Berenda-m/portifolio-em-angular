@@ -35,8 +35,8 @@ export class ExercicioPut {
   atualizarPost(event: SubmitEvent) {
     event.preventDefault();
   this.ApiService.atualizarPost(this.exercicioPutModel()).subscribe({
-    next: () =>{
-      alert('Cadastro atualizado')
+    next: (response) =>{
+      alert('Cadastro atualizado id: ' + response.id)
       this.exercicioPutModel.set({
         id: null,
         userId: null,
