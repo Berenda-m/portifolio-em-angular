@@ -1,5 +1,5 @@
 export interface Aluno {
 
     nome: string;
-    media: number
+    media: number|null
 }
