@@ -24,12 +24,14 @@ export class ExercicioDelete {
 
     this.ApiService.deletePost(this.exercicioDeleteModel()).subscribe({
       next: (response) =>{
-        alert('Cadastro deletado id: ' + response.id);
+        alert('Cadastro deletado ');
         this.exercicioDeleteModel.set({
           id: null
         });
       }
     });
   }
+
+  
 }
 
