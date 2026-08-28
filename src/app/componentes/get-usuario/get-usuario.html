@@ -1,0 +1,21 @@
+<h1>Exercicio GET 2</h1>
+
+<button (click)="recarregarGet()">Recarregar</button>
+
+
+@if (getUsuarioService.getUsuarios.isLoading()) {
+<p>carregando...</p>
+} @else if (getUsuarioService.getUsuarios.error()) {
+<p>Algo deu errado</p>
+    }
+
+    @else if (getUsuarioService.getUsuarios.hasValue()) {
+    @for (getUsuarios of getUsuarioService.getUsuarios.value(); track getUsuarios.id) {
+<div class="card">
+    <p>{{getUsuarios.username}}</p>
+    <p>{{getUsuarios.email}}</p>
+    <p>{{getUsuarios.name}}</p>
+    <p>{{getUsuarios.phone}}</p>
+</div>
+}
+}

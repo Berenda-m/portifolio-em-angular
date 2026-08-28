@@ -1,10 +1,12 @@
 import { Component, signal } from '@angular/core';
 import { Formulario } from '../formulario/formulario';
+import { GetUsuario } from "../get-usuario/get-usuario";
+import { PostUsuario } from "../post-usuario/post-usuario";
 
 @Component({
   selector: 'app-contato',
   standalone: true,
-  imports: [Formulario],
+  imports: [Formulario, GetUsuario, PostUsuario],
   templateUrl: './contato.html',
   styleUrl: './contato.css',
 })

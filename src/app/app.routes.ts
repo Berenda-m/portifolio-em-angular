@@ -11,6 +11,8 @@ import { FormularioExercicios } from './componentes/formulario-exercicios/formul
 import { ExercicioPut } from './componentes/exercicio-put/exercicio-put';
 import { ExercicioDelete } from './componentes/exercicio-delete/exercicio-delete';
 import { ExerciciosGet } from './componentes/exercicios-get/exercicios-get';
+import { GetUsuario } from './componentes/get-usuario/get-usuario';
+import { PostUsuario } from './componentes/post-usuario/post-usuario';
 
 
 export const routes: Routes = [
@@ -25,5 +27,7 @@ export const routes: Routes = [
     {path: 'formularios-exercicios', component: FormularioExercicios},
     {path:'exercicios-put', component: ExercicioPut},
     {path: 'exercicios-delete',component: ExercicioDelete},
-    {path: 'exercicios-get', component: ExerciciosGet}
+    {path: 'exercicios-get', component: ExerciciosGet},
+    {path:'get-usuario', component: GetUsuario},
+    {path: 'post-usuario', component: PostUsuario}
 ];

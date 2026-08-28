@@ -22,16 +22,16 @@
    <p>{{aluno.nome}}</p>
    <p>{{aluno.media}}</p>
 
-   @if (aluno.media >= 9) {
+   @if (aluno.media! >= 9) {
    <p class="aprovado">Aprovado</p>
    <img src="images/aprovado.gif" alt="gato com rosa" width="120">
    }
 
-   @else if (aluno.media >= 7) {
+   @else if (aluno.media! >= 7) {
    <p class="aprovado">Aprovado</p>
    <img src="images/aprovado.gif" alt="gato com rosa" width="120">
    }
-   @else if (aluno.media <= 6) {
+   @else if (aluno.media! <= 6) {
       <p class="reprovado">Reprovado</p>
       <img src="images/reprovado.gif" alt="gato rindo" width="120">
    }
