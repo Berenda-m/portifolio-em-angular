@@ -1,6 +1,6 @@
 <h1>Exercicios Post 2</h1>
 
-<form>
+<form (submit)="cadastrarUsuario($event)">
 
 <input type="text"  [formField]="postUsuarioForm.name"   placeholder="Nome">
 
@@ -10,7 +10,7 @@
 
 <input type="number" [formField]="postUsuarioForm.phone" placeholder="Phone">
 
-
+<button type="submit">Post</button>
 
 
 </form>
