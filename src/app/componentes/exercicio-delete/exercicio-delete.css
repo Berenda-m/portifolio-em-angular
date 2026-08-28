@@ -63,7 +63,7 @@ button {
 }
 
 button:hover {
-    background: var(--dark);
+    background: var(--accent);
 }
 
 p {

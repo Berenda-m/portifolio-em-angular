@@ -11,4 +11,8 @@ export class ExerciciosGet {
 
   protected readonly apiservice= inject(ApiService);
 
+  protected recarregarPosts(){
+    this.apiservice.postsDetails.reload();
+  }
+
 }

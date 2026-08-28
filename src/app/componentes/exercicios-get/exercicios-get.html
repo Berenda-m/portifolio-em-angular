@@ -1,10 +1,15 @@
-
 <h1>Exercicio GET</h1>
+
+<button (click)="recarregarPosts()">Recarregar</button>
 
 @if (apiservice.postsDetails.isLoading()) {
 <p>carregando...</p>
-}@else {
-    @for (postDetails of apiservice.postsDetails.value(); track postDetails.id) {
+}@else if (apiservice.postsDetails.error()) {
+<p>Algo deu errado</p>
+}
+
+@else if (apiservice.postsDetails.hasValue()) {
+@for (postDetails of apiservice.postsDetails.value(); track postDetails.id) {
 
 <h1>{{postDetails.id}}</h1>
 <p>{{postDetails.body}}</p>
